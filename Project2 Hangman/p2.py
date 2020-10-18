@@ -1,0 +1,75 @@
+import random
+
+def decrypt(plain_text):
+    length = len(plain_text)
+    cipher_text = ""
+    for i in range(length):
+        if i%2 == 0:
+            cipher_text += chr(ord(plain_text[i]) - 1)
+        else:
+            cipher_text += chr(ord(plain_text[i]) + 1)
+    return cipher_text
+
+#update the "blind_word"
+def sub(word,digit,replace):
+        new = []
+        for s in word:
+            new.append(s)
+        new[digit] = replace
+        return ''.join(new)
+
+#main body of the hangman game
+def hangman(word):
+    count_life = 0
+    count_correct = 0
+    length = len(word)
+    letters = []
+    decrypted = decrypt(word)
+    
+    #creat the blind word
+    blind_word = ""
+    #form the "blind word"
+    for i in range(0, length):
+        blind_word += "-"
+
+    while count_life < 10:
+        #print the report for every round
+        print(f"You have {10 - count_life} lives left and you have used these letters: {letters}")
+        print(f"Current word: {blind_word}")
+        guess = input("Guess a letter: ")
+        print("")
+        #change whatever the input is to upper case
+        guess = guess.upper()
+
+        letters.append(guess)
+        
+        #when successful in guessing
+        if guess in word:
+            #iterate the word to change the letter
+            for index in range(length):
+                if word[index] == guess:
+                    blind_word = sub(blind_word, index, word[index])
+            #add amount of successful guess
+            count_correct += word.count(guess)
+        
+        #when failed in guessing
+        if guess not in word:
+            print(f"Your letter {guess}, is not in the word.")
+            count_life += 1
+        
+        #success report
+        if count_correct == length:
+            print(f"You guessed the word {word}!")
+            print(f"This was the encrypted message.")
+            print(f"The decaded message says {decrypted}.")
+            break
+
+        #death report
+        if count_life == 10:
+            print(f"You died. Sorry! The word was {word}.")
+            print("You will have to guess the word correctly to decade the message.")
+
+
+#word list and function call
+words = ["WHDSPQZ", "XHO", "TTDBFRT", "QQJYF", "ENQD", "DNPK", "CNTR", "EHWHOD", "TSVMOHOF", "XNOCFQGTM"]
+hangman(words[random.randint(0, 9)])
