@@ -10,3 +10,6 @@ hangman() consisting some reports about the game.
 You have 10 lives in the game based on a while loop.
 When you win, out put consists word you guessed and its decrypted version.
 Encryption is based on some ASCII plus and minus function.
+
+In case the jupyter file does not show properly.
+There is also a python file.
