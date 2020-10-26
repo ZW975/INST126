@@ -3,6 +3,7 @@ After reading file, use readlines to create a list of strings.
 Iterate and split(" ") every string
 Iterate the list and make it into a list of dictionary using e-mails as keys
 For each dictionary, check times of login and login times
+Once found a case, total_count += 1
 Generate output
 
 2.
@@ -10,6 +11,7 @@ After reading file, use readlines to create a list of strings.
 Iterate and split(" ") every string
 Iterate the list and creat a list of dictionarys dicitonaries using login date as keys(split date and time first of course)
 check total login times and log out times
+Once found a case, total_count += 1
 Generate output
 
 3.
