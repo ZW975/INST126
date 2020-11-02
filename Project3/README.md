@@ -24,6 +24,8 @@ check total login times and log out times
 Once found a case, total_count += 1
 Generate output
 
+Note: part of 2 and 3 can share the same function, and use different output funcionts
+
 4.
 After reading file, use readlines to create a list of strings.
 Iterate and split(" ") every string
