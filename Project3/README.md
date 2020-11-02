@@ -17,7 +17,12 @@ Once found a case, total_count += 1
 Generate output
 
 3.
-Similar to 2
+After reading file, use readlines to create a list of strings.
+Iterate and split(" ") every string
+Iterate the list and creat a list of dictionarys dicitonaries using login date as keys(split date and time first of course)
+check total login times and log out times
+Once found a case, total_count += 1
+Generate output
 
 4.
 After reading file, use readlines to create a list of strings.
