@@ -32,3 +32,7 @@ Split("@") for every string in the list
 Take the domain out
 Make a dictionary using domains as keys, and count appearing times
 Generate output
+
+Note for myself:
+For all the data I have, maybe I need to add more datatypes to store different part of input.
+Also, I need to consider how to sort list etc. to not mess up everything.
