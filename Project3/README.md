@@ -34,3 +34,10 @@ Split("@") for every string in the list
 Take the domain out
 Make a dictionary using domains as keys, and count appearing times
 Generate output
+
+Errors I came across:
+1. When sorting the first dictionary that contains all the data, I could not make it right. I cannot remind the name of the error.
+   It end up I have to use two different methods on sorting the big dictionary.
+2. When looking for suspicious behaviors, in the beginning, for the new dictionary, I did not initialize the data type, that caused error.
+3. When generating output string, because of the complexity of the data type, I kept having errors that prints data that does not make sense.
+   I fix it by using isistance(object, datatype)
